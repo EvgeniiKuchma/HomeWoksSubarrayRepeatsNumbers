@@ -28,14 +28,15 @@ namespace HomeWoksSubarrayRepeatsNumbers
 
             for (int i = 0; i < numbers.Length - 1; i++)
             {
-                if (countRepeat > maxNumberRepetitions)
-                {
-                    repeatNumber = numbers[i];
-                    maxNumberRepetitions = countRepeat;
-                }
                 if (numbers[i] == numbers[i + 1])
                 {
                     countRepeat++;
+
+                    if (countRepeat > maxNumberRepetitions)
+                    {
+                        repeatNumber = numbers[i];
+                        maxNumberRepetitions = countRepeat;
+                    }
                 }
                 else
                 {
